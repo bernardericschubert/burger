@@ -8,7 +8,19 @@
 <div class="container">
     <div class="row">
         <div class="col-sm">
-        One of three columns
+            <h4 class="header">Burgers to eat</h4>
+            {{#each burgers}}
+                {{#unless this.devoured}}
+                    <div>
+                        <ul>
+                            <li>
+                                {{burger_name}}
+                                <button class="btn btn-sm btn-primary" id="eat-it" data-id="{{id}}">Eat It!</button>
+                            </li>
+                        </ul>
+                    </div>
+                {{/unless}}
+            {{/each}}
         </div>
         <div class="col-sm">
             <div class="row">
@@ -17,10 +29,10 @@
             <div class="row">
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="burgerText" aria-describedby="burgerText" placeholder="Hungry?">
+                        <input type="text" class="form-control" id="new-burger" aria-describedby="burgerText" placeholder="Hungry?">
                         <small id="burgerText" class="form-text text-muted">Enter a burger you'd like to eat and hit Submit</small>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
                 </form>
             </div>
         </div>

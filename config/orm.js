@@ -11,7 +11,7 @@ var orm = {
     },
 
     insertOne: function(burgerName) {
-        var queryString = "INSERT INTO burgers SET ?;";
+        var queryString = "INSERT INTO burgers SET ?";
         connection.query(queryString, {
             burger_name: burgerName
         }, (err, data) => {
@@ -21,7 +21,7 @@ var orm = {
     },
 
     updateOne: function(oneBurger) {
-        var queryString = "UPDATE burgers set devoured = true WHERE id = ?;";
+        var queryString = "UPDATE burgers set devoured = 1 WHERE id = ?;";
         connection.query(queryString,[oneBurger],
         (err, data) => {
             if (err) throw err;
