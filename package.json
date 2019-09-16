@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "University of Oregon bootcamp Handlebars assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernardericschubert/burger.git"
+  },
+  "author": "Bernard Eric Schubert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bernardericschubert/burger/issues"
+  },
+  "homepage": "https://github.com/bernardericschubert/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}
