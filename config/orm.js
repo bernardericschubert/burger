@@ -1,16 +1,17 @@
 var connection = require("../config/connection.js");
 
 var orm = {
-    selectAll: function(all) {
-        var queryString = "SELECT * FROM burger;";
+    selectAll: function(cb) {
+        var queryString = "SELECT * FROM burgers;";
         connection.query(queryString, (err, data) => {
             if (err) throw err;
-            all(data);
+            cb(data);
+            //console.log("this is the select all result" + data);
         });
     },
 
-  insertOne: function(burgerName) {
-        var queryString = "INSERT INTO burger SET ?;";
+    insertOne: function(burgerName) {
+        var queryString = "INSERT INTO burgers SET ?;";
         connection.query(queryString, {
             burger_name: burgerName
         }, (err, data) => {
@@ -19,8 +20,8 @@ var orm = {
         });
     },
 
-  updateOne: function(oneBurger) {
-        var queryString = "UPDATE burger set devoured = true WHERE id = ?;";
+    updateOne: function(oneBurger) {
+        var queryString = "UPDATE burgers set devoured = true WHERE id = ?;";
         connection.query(queryString,[oneBurger],
         (err, data) => {
             if (err) throw err;
