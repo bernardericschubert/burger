@@ -10,7 +10,7 @@ Burger app is a full stack application for burger lovers to track types of burge
 
 The application uses HTML + Bootstrap + Handlebars with jQuery for it's front-end, Node.js and Express for the back-end, MySQL for storage, and is hosted on Heroku.
 
-Visit the hosted application here: https://cryptic-headland-75466.herokuapp.com/
+Visit the hosted application here: https://serene-lake-07703.herokuapp.com/
 
 
 ## Technologies
