@@ -1,7 +1,7 @@
 // Dependencies
 var express = require("express");
 var exphbs = require("express-handlebars");
-var routes = require("./controller/burgers_controller.js");
+var routes = require("./controllers/burgers_controller.js");
 
 // Create an instance of the express app.
 var app = express();
