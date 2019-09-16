@@ -1,5 +1,5 @@
 $(function () {
-    $("#eat-it").on("click", function (event) {
+    $(".eat-it").on("click", function (event) {
         var id = $(this).data("id");
         $.ajax(`/api/update/${id}`, {
             type: "PUT"

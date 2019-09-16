@@ -20,9 +20,9 @@ var orm = {
         });
     },
 
-    updateOne: function(oneBurger) {
-        var queryString = "UPDATE burgers set devoured = 1 WHERE id = ?;";
-        connection.query(queryString,[oneBurger],
+    updateOne: function(eatBurger) {
+        var queryString = "UPDATE burgers set devoured = true WHERE id = ?;";
+        connection.query(queryString,[eatBurger],
         (err, data) => {
             if (err) throw err;
             return(data);
