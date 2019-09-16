@@ -6,15 +6,12 @@ var orm = {
         connection.query(queryString, (err, data) => {
             if (err) throw err;
             cb(data);
-            //console.log("this is the select all result" + data);
         });
     },
 
     insertOne: function(burgerName) {
         var queryString = "INSERT INTO burgers SET ?";
-        connection.query(queryString, {
-            burger_name: burgerName
-        }, (err, data) => {
+        connection.query(queryString, { burger_name: burgerName }, (err, data) => {
             if (err) throw err;
             return(data);
         });
@@ -22,8 +19,7 @@ var orm = {
 
     updateOne: function(eatBurger) {
         var queryString = "UPDATE burgers set devoured = true WHERE id = ?;";
-        connection.query(queryString,[eatBurger],
-        (err, data) => {
+        connection.query(queryString,[eatBurger], (err, data) => {
             if (err) throw err;
             return(data);
         });
